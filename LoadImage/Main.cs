@@ -16,14 +16,9 @@ namespace LoadImage
             _imagePath = _fileHelper.DeserializeFromFile();
 
             if(_imagePath != null)
-            {
                 pbLoadPicture.Load(_imagePath);
-            }
-            
-            if(pbLoadPicture.Image == null)
-            {
+            else
                 btnDelete.Visible = false;
-            }
         }
 
         private void btnAddPicture_Click(object sender, EventArgs e)
